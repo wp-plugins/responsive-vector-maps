@@ -3,7 +3,7 @@
      * Plugin Name: RVM - Responsive Vector Maps
      * Plugin URI: http://www.responsivemapsplugin.com/
      * Description: Use RVM to create as many responsive vector maps as you want... stop using area tag to create your linkable maps.
-     * Version: 1.0
+     * Version: 1.1
      * Author: Enrico Urbinati
      * Author URI: http://www.responsivemapsplugin.com/
      * License: GPL2
@@ -24,7 +24,7 @@
         Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     */
 
-define( 'RVM_VERSION' , '1.0' ) ; 
+define( 'RVM_VERSION' , '1.1' ) ; 
 define( 'RVM_PLUGIN_FILE' , plugin_basename( __FILE__ ) ) ;    
 define( 'RVM_PLUGIN_DIR_PATH' , plugin_dir_path( __FILE__ ) ) ;
 define( 'RVM_PLUGIN_DIR_URL' , plugin_dir_url( __FILE__ ) ) ;

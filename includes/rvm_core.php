@@ -31,7 +31,7 @@ function rvm_countries_array() {
     $countries[ 'France' ] = array( 'france', __( 'France', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-fr_merc_js' , 'fr_merc_en', 0.8057915 ) ;
     $countries[ 'Netherlands' ] = array( 'netherlands', __( 'Netherlands', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-nl_merc_js' , 'nl_merc_en', 0.8399607 ) ;
     $countries[ 'Poland' ] = array( 'poland', __( 'Poland', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-pl_merc_js' , 'pl_merc_en', 1.0555115 ) ; 
-    $countries[ 'Sweden' ] = array( 'sweden', __( 'Sweden', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-sv_merc_js' , 'se_merc_en', 0.4359546) ;
+    $countries[ 'Sweden' ] = array( 'sweden', __( 'Sweden', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-se_merc_js' , 'se_merc_en', 0.4359546) ;
     $countries[ 'Switzerland' ] = array( 'switzerland', __( 'Switzerland', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-ch_merc_js' , 'ch_merc_en', 1.614945 ) ;
     $countries[ 'Norway' ] = array( 'norway', __( 'Norway', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-no_merc_js' , 'no_merc_en', 0.7592786 ) ;
     $countries[ 'Spain' ] = array( 'spain', __( 'Spain', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-es_merc_js' , 'es_merc_en', 1.3405912 ) ;
@@ -215,7 +215,7 @@ function rvm_mb_function( $post ) {
         // generate the shortcode ;
         
         echo '<div id="rvm_shortcode" class="updated"><p>' . __( 'Use following shortcode to display this map whenever you like ( only once per post/sidebar per page ):' , RVM_TEXT_DOMAIN ) . ' <strong>[rvm_map mapid="' . $post->ID .'"]</strong> .</p></div>'  ;
-        echo '<div id="rvm_donation" class="updated"><p>' . __( 'Do you like <strong>RVM</strong> ? Please consider making a donation now' , RVM_TEXT_DOMAIN )   . '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40responsivemapsplugin%2ecom&lc=IT&item_name=responsive%20Vector%20Maps%20Plugin&item_number=rvm%2dplugin%2dwordpress%2drepo&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">
+        echo '<div id="rvm_donation" class="updated"><p>' . __( 'Do you like <strong>RVM</strong> ? Please consider making a donation now' , RVM_TEXT_DOMAIN )   . '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40responsivemapsplugin%2ecom&lc=IT&item_name=responsive%20Vector%20Maps%20Plugin&item_number=rvm%2dplugin%2dwordpress%2dadmin&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">
 <img style="vertical-align:middle;margin-left:5px;" src="' . RVM_IMG_PLUGIN_DIR . '/donate_button.png" /></a></p></div>' ;
              
     }

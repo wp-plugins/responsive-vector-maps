@@ -31,7 +31,7 @@ function rvm_countries_array() {
     $countries[ 'France' ] = array( 'france', __( 'France', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-fr_merc_js' , 'fr_merc_en', 0.8057915 ) ;
     $countries[ 'Netherlands' ] = array( 'netherlands', __( 'Netherlands', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-nl_merc_js' , 'nl_merc_en', 0.8399607 ) ;
     $countries[ 'Poland' ] = array( 'poland', __( 'Poland', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-pl_merc_js' , 'pl_merc_en', 1.0555115 ) ; 
-    $countries[ 'Sweden' ] = array( 'sweden', __( 'Sweden', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-sv_merc_js' , 'se_merc_en', 0.4359546) ;
+    $countries[ 'Sweden' ] = array( 'sweden', __( 'Sweden', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-se_merc_js' , 'se_merc_en', 0.4359546) ;
     $countries[ 'Switzerland' ] = array( 'switzerland', __( 'Switzerland', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-ch_merc_js' , 'ch_merc_en', 1.614945 ) ;
     $countries[ 'Norway' ] = array( 'norway', __( 'Norway', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-no_merc_js' , 'no_merc_en', 0.7592786 ) ;
     $countries[ 'Spain' ] = array( 'spain', __( 'Spain', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-es_merc_js' , 'es_merc_en', 1.3405912 ) ;

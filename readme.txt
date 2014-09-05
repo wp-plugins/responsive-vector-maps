@@ -1,10 +1,10 @@
 === RVM - Responsive Vector Maps ===
 Contributors: Enrico Urbinati
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40responsivemapsplugin%2ecom&lc=IT&item_name=responsive%20Vector%20Maps%20Plugin&item_number=rvm%2dplugin%2dwordpress%2drepo&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: responsive maps, svg, maps, country maps, France map, Germany map, Italy map, Netherlands map, Norway map, Poland map, Portugal map, Spain map, Sweden map, Switzerland map, United Kingdom map, customisable maps, vector maps, svg map     
+Tags: responsive maps, svg, maps, country maps, France map, Germany map, Italy map, Netherlands map, Norway map, Poland map, Portugal map, Spain map, Sweden map, Switzerland map, United Kingdom map, customisable maps, vector maps, svg map, linkable map     
 Requires at least: 3.6
-Tested up to: 3.9.1
-Stable tag: 1.1
+Tested up to: 4.0
+Stable tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,12 @@ an additional **width** parameter to the shortcode within a specific post. Your 
 6. The result... finally! We see a widget sidebar and a content map ( Notice we used two different shortcode/ID for Italy map )
 
 == Changelog ==
+
+= 1.2 =
+Release on 05/09/2014
+Fix Polish map not saving region links
+Added Europe and World map !
+Use of WP default color picker for map setting
 
 = 1.1 =
 Fix Sweden map not displaying : release on 28/07/2014

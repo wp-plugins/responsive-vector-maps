@@ -14,9 +14,9 @@ function rvm_fields_array() {
     $fields[ 'rvm_mbe_select_target' ] = array( 'rvm_mbe_select_target', 'select', __( 'Target of Region Links' , RVM_TEXT_DOMAIN ) , __( '( Ex. "_blank" will open the link in a new window )' , RVM_TEXT_DOMAIN ), '', 10, 1, 'main' ) ;
     $fields[ 'rvm_mbe_map_mapid' ] = array( 'rvm_mbe_map_mapid', 'hidden', '' , '', '', '', 1, 'main' ) ; // this is for map id container - will be used by jvectormap to address div map container
     $fields[ 'rvm_mbe_width' ] = array( 'rvm_mbe_width', 'text', __( 'Map width' , RVM_TEXT_DOMAIN ) ,  __( '( You can use em, %, px etc.. Leave it blank if you want a responsive map )' , RVM_TEXT_DOMAIN ), '', 10, 1, 'main' ) ;
-    $fields[ 'rvm_mbe_map_canvascolor' ] = array( 'rvm_mbe_map_canvascolor', 'text', __( 'Canvas Background Color', RVM_TEXT_DOMAIN ) , '( Hexadecimal color Ex.: #333333 )', 7, 7, 1, 'main' ) ;
-    $fields[ 'rvm_mbe_map_bgcolor' ] = array( 'rvm_mbe_map_bgcolor', 'text', __( 'Map Color', RVM_TEXT_DOMAIN ) , '( Hexadecimal color Ex.: #333333 )', 7, 7, 1, 'main' ) ;
-    $fields[ 'rvm_mbe_map_bordercolor' ] = array( 'rvm_mbe_map_bordercolor', 'text', __( 'Map Border Color', RVM_TEXT_DOMAIN ) , '( Hexadecimal color Ex.: #333333 )', 7, 7, 1, 'main' ) ; 
+    $fields[ 'rvm_mbe_map_canvascolor' ] = array( 'rvm_mbe_map_canvascolor', 'text', __( 'Canvas Background Color', RVM_TEXT_DOMAIN ) , '', 7, 7, 1, 'main' ) ;
+    $fields[ 'rvm_mbe_map_bgcolor' ] = array( 'rvm_mbe_map_bgcolor', 'text', __( 'Map Color', RVM_TEXT_DOMAIN ) , '', 7, 7, 1, 'main' ) ;
+    $fields[ 'rvm_mbe_map_bordercolor' ] = array( 'rvm_mbe_map_bordercolor', 'text', __( 'Map Border Color', RVM_TEXT_DOMAIN ) , '', 7, 7, 1, 'main' ) ; 
     return $fields;
     
 }
@@ -37,7 +37,8 @@ function rvm_countries_array() {
     $countries[ 'Spain' ] = array( 'spain', __( 'Spain', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-es_merc_js' , 'es_merc_en', 1.3405912 ) ;
     $countries[ 'Portugal' ] = array( 'portugal', __( 'Portugal', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-pt_merc_js' , 'pt_merc_en', 0.3636363 ) ;
     $countries[ 'United-Kingdom' ] = array( 'unitedkingdom', __( 'United Kingdom', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-uk_merc_js' , 'uk_merc_en', 0.5354944 ) ;
-    
+    $countries[ 'Europe' ] = array( 'europe', __( 'Europe', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-europe_merc_js' , 'europe_merc_en', 0.8991364 ) ;
+    $countries[ 'World' ] = array( 'world', __( 'World', RVM_TEXT_DOMAIN ), 'rvm_jquery-jvectormap-world_merc_js' , 'world_merc_en', 1.5435268 ) ;        
     return $countries;
     
 }
@@ -147,7 +148,7 @@ function rvm_mb_function( $post ) {
                     
                     $output .= '<label for="' . $field[ 0 ] .'" ' . RVM_LABEL_CLASS . '>' . $field[ 2 ] . '</label>' ;
                     $output .= '<select  ' . $id_and_class . ' name="' . $field[ 0 ] . '" id="' . $field[ 0 ] . '">' ;                    
-                    $output .= '<option value="select_country" ' . selected( '', $field_value, false ) . '>Select a country</option>' ;
+                    $output .= '<option value="select_country" ' . selected( '', $field_value, false ) . '>' . __( 'Select...' , RVM_TEXT_DOMAIN ) .'</option>' ;
                     foreach ( $array_countries as $country_field ) {
                         
                         $output .= '<option value="' . $country_field[ 0 ] . '" ' . selected( $country_field[ 0 ] , $field_value, false ) . '>' . $country_field[ 1 ] . '</option>' ;
@@ -292,8 +293,8 @@ class rvm_regions_include { // dynamically include regions files
             $field_value = get_post_meta( $post_id, '_' . $region[ 1 ], true );
             $id_and_class = 'id="' . $region[ 0 ] . '" ' . RVM_REGION_LINK_CLASS ; //add specific id and classes for fields  
             $output .= '<p>' ;                               
-            $output .= '<label for="' . $region[ 0 ] . '" ' . RVM_LABEL_CLASS . ' >' . $region[ 2 ] . '</label>' ;           
-            $output .= '<input ' . $id_and_class . ' type="text" name="' . $region[ 1 ] . '" value="' . esc_url( $field_value ) . '" >' ; 
+            $output .= '<label for="' . $region[ 0 ] . '" ' . RVM_LABEL_CLASS . ' >' . $region[ 2 ] . '</label>' ;                     
+            $output .= '<input ' . $id_and_class . ' type="text" name="' . trim( $region[ 1 ] ) . '" value="' . esc_url( $field_value ) . '" >' ; 
             $output .= '</p>' ;
     
         } //foreach( $array_fields as $field) 

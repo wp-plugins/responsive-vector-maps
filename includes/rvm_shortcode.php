@@ -86,15 +86,18 @@ function rvm_map_shortcode( $attr ) {    // $attr manages the shortcode paramete
             $output .= '( function($) { $(function(){';        
             $output .= '$("#' . $map_name . '-map-' . $map_id . '").vectorMap({ map: "' . $js_map_id . '" ,' ;
             $output .= 'regionStyle: { initial: { fill: "' . $map_bgcolor . '", "fill-opacity": 1, stroke: "' . $map_border_color . '", "stroke-width": 1 }, selected: { fill: "' . $map_bgcolor . '" }}, backgroundColor: "' . $map_canvas_color . '",'; 
-            $output .= 'zoomButtons: ' . $map_zoom . ', zoomOnScroll: false, ' ;           
+            $output .= 'zoomButtons: ' . $map_zoom . ', zoomOnScroll: false, ' ;               
             
             // Changing cursor from arrow to hand when a map has a link
             $output .= 'onRegionOver : function(event, code, region){' ;
             
-            foreach ( $array_regions as $region ) {
+            foreach ( $array_regions as $region ) {                
+                
                 
                 //$region[ 2 ] is region code to target the onRegionClick function
                 $map_region_link = get_post_meta( $map_id, '_' . $region[ 1 ] , true ) ;
+                
+                if ( trim( $region[ 1 ] ) == 'IND' ) { $region[ 1 ] = 'ID' ; }  // prevent field to be filled with post ID for Indonesia
                 
                 if( !empty( $map_region_link ) ) {
                
@@ -113,9 +116,12 @@ function rvm_map_shortcode( $attr ) {    // $attr manages the shortcode paramete
             $output .= 'onRegionClick : function(event, code){' ;
             
             foreach ( $array_regions as $region ) {
+                
                 //$region[ 2 ] is region code to target the onRegionClick function
                 $map_region_link = get_post_meta( $map_id, '_' . $region[ 1 ] , true ) ;
-    
+                
+                if ( trim( $region[ 1 ] ) == 'IND' ) { $region[ 1 ] = 'ID' ; }  // prevent field to be filled with post ID for Indonesia               
+                
                 
                 if( !empty( $map_region_link ) ) {
                     // window.open should not work on mobile devices, so let's create a fallback for it

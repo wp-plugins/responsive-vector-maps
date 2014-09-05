@@ -69,6 +69,11 @@
 			$( '#rvm_map_preview' ).html( '' ) ;
 			
 		});// $( '#preview_button' ).click( function()
+		
+		
+		// colour picker
+		
+		$('#rvm_mbe_map_canvascolor,#rvm_mbe_map_bgcolor,#rvm_mbe_map_bordercolor').wpColorPicker();
 
 	
 	

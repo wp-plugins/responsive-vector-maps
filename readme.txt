@@ -84,10 +84,10 @@ an additional **width** parameter to the shortcode within a specific post. Your 
 == Changelog ==
 
 = 1.2 =
-Release on 05/09/2014
-Fix Polish map not saving region links
-Added Europe and World map !
-Use of WP default color picker for map setting
+* Release on 05/09/2014
+* Fix Polish map not saving region links
+* Added Europe and World map !
+* Use of WP default color picker for map setting
 
 = 1.1 =
 Fix Sweden map not displaying : release on 28/07/2014

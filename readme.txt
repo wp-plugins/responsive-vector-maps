@@ -25,7 +25,7 @@ You can use maps in sidebars as widgets or just in the post content using shortc
 * Responsive: maps will adapt their width to any device
 * Cross-browser compatibility using ( yes, works even on IE7 - use SVG / RVML )
 * High quality image: vector maps never loose quality
-* Many maps available: France, Germany, Italy, Netherlands, Norway, Poland, Portugal, Spain, Sweden, Switzerland, United Kingdom
+* Many maps available: France, Germany, Italy, Netherlands, Norway, Poland, Portugal, Spain, Sweden, Switzerland, United Kingdom, Europe and whole World ( with clickable countries ).
 * Mouse over tool tip effect
 * Linkable region
 * Customisable look and feel

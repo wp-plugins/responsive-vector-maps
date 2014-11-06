@@ -163,18 +163,29 @@ function regionsparams( $postid, $region ) {
     $field_value = get_post_meta( $postid, '_' . $region, true ) ;// get regions link ver < 2.0 for retrocompatibility    
     $regionsparams_array = array();
     
-    if( is_array( unserialize ( $field_value ) ) ) {         
-        
-        $field_value = unserialize ( $field_value )  ;
-        $regionsparams_array[ 'field_region_link' ] = $field_value[ 0 ] ;
-        $regionsparams_array[ 'field_region_bg' ] = $field_value[ 1 ] ;
-        
+    if( empty( $field_value ) ){
+            
+        $regionsparams_array[ 'field_region_link' ] = '' ;
+        $regionsparams_array[ 'field_region_bg' ] = '' ;
+            
     }
     
     else {
+    
+        if( is_array( unserialize ( $field_value ) ) ) {         
+            
+            $field_value = unserialize ( $field_value )  ;
+            $regionsparams_array[ 'field_region_link' ] = esc_url( $field_value[ 0 ] ) ;
+            $regionsparams_array[ 'field_region_bg' ] = esc_attr( $field_value[ 1 ] ) ;
+            
+        }
         
-        $regionsparams_array[ 'field_region_link' ] = $field_value ;
-        
+        else {
+            
+            $regionsparams_array[ 'field_region_link' ] = esc_url( $field_value ) ;
+            
+        }
+    
     }
     
     return $regionsparams_array ;
@@ -450,11 +461,14 @@ function rvm_mb_save_meta( $post_id ) {
         $array_fields = $regions ; // $regions is an array in the included file                                   
                         
         foreach ( $array_fields as $field ) {
-                      
-            $rvm_regions_data = serialize( $_POST[ $field[ 1 ] ] ) ;
-        
-            update_post_meta( $post_id, '_' . $field[ 1 ], strip_tags( $rvm_regions_data ) ) ;
             
+            if ( !empty( $_POST[ $field[ 1 ] ] ) ) {
+                
+                $rvm_regions_data = serialize( $_POST[ $field[ 1 ] ] ) ;
+                update_post_meta( $post_id, '_' . $field[ 1 ], strip_tags( $rvm_regions_data ) ) ;
+                   
+            }
+           
         }
 
         /****************  End: Save region fields to DB *****************/ 

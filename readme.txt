@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%
 Tags: responsive maps, svg, maps, country maps, France map, Germany map, Italy map, Netherlands map, Norway map, Poland map, Portugal map, Spain map, Sweden map, Switzerland map, United Kingdom map, customisable maps, vector maps, svg map, linkable map     
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,6 +84,10 @@ an additional **width** parameter to the shortcode within a specific post. Your 
 5. The result... finally! We see a widget sidebar and a content map ( Notice we used two different shortcode/ID for Italy map )
 
 == Changelog ==
+
+= 2.1 =
+* Release on November 2014
+* Fixed issue display weird link on blank field in region section
 
 = 2.0 =
 * Release on November 2014

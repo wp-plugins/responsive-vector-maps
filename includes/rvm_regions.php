@@ -16,13 +16,13 @@ $output .= '<div id="rvm_regions_from_db">' ;
 foreach( $array_regions as $region ) {
     
     $regionsparams_array = regionsparams( $post->ID, $region[ 1 ] ) ; // get regions/countries values for links and backgrounds each region '$region[ 1 ]'
-   
+    
     // region link array            
     $id_and_class = 'id="' . $region[ 0 ] . '" ' . RVM_REGION_LINK_CLASS ; //add specific id and classes for fields  
     $output .= '<p>' ;                               
     $output .= '<label for="' . $region[ 0 ] . '" ' . RVM_LABEL_CLASS . ' >' . $region[ 2 ] . '</label>' ;                     
-    $output .= '<input ' . $id_and_class . ' type="text" name="' . $region[ 1 ]  . '[]" value="' . esc_url( $regionsparams_array[ 'field_region_link' ] ) . '" >' ; 
-    $output .= '<input class="rvm_color_picker" type="text" name="' . $region[ 1 ]  . '[]" value="' . esc_attr( $regionsparams_array[ 'field_region_bg' ] ) . '" >' ;
+    $output .= '<input ' . $id_and_class . ' type="text" name="' . $region[ 1 ]  . '[]" value="' . $regionsparams_array[ 'field_region_link' ] . '" >' ; 
+    $output .= '<input class="rvm_color_picker" type="text" name="' . $region[ 1 ]  . '[]" value="' . $regionsparams_array[ 'field_region_bg' ] . '" >' ;
     $output .= '</p>' ;
     
 

@@ -15,7 +15,7 @@ Get RVM to create as many responsive vector maps as you want... stop using area 
 RVM ( Responsive Vector Maps ) allows you to create responsive vector maps for your Wordpress site.
 
 Vector maps have the advantage to not loose quality when reducing or increasing their sizes. Using RVM you will not need to create static images for area map tags.
-Based on great work of Kirill Lebedev [jvectormap](jvectormap.com/), this plugin uses a combination of css, html and javascript to create as many svg maps as you like for your site.
+Based on great work of Kirill Lebedev [jvectormap](http://jvectormap.com/), this plugin uses a combination of css, html and javascript to create as many svg maps as you like for your site.
 
 You can use maps in sidebars as widgets or just in the post content using shortcodes.
 
@@ -25,8 +25,8 @@ You can use maps in sidebars as widgets or just in the post content using shortc
 * Responsive: maps will adapt their width to any device
 * Cross-browser compatibility using ( yes, works even on IE7 - use SVG / RVML )
 * High quality image: vector maps never loose quality
-* Many maps available on default installation: France ( regions ), Germany, Italy, Netherlands, Norway, Poland, Portugal, Spain, Sweden, Switzerland, United Kingdom, Europe, USA, Belgium and whole World ( with clickable countries ).
-* Dozens of downloadable maps from responsivemapsplugin.com
+* Many default maps available: France ( regions ), Germany, Italy, Netherlands, Norway, Poland, Portugal, Spain, Sweden, Switzerland, United Kingdom, Europe, USA, Belgium and whole World ( with clickable countries ).
+* Dozens of downloadable maps from [responsivemapsplugin.com](http://www.responsivemapsplugin.com/expand-your-horizons/)
 * Chance to install dynamic maps with all kind of svg ( not only geographical maps ! )
 * Mouseover tooltip effect
 * Subdivisions ( Country, Regions, Provinces, Districts etc...): customise background colours, links and html popup ( tooltip )
@@ -66,7 +66,6 @@ Yes, these are possible layout customisations:
 
 Yes, it's possible to customise links for each region/area displayed in the map. When creating a new map or editing an existing one, you will have chance to
 assign url to each area/region of the map. Default areas/regions have just a tooltip mouseover effect displaying area/region name.
-Furthermore you can decide the targets of the link ( where the links needs to be onpened ): _blank, _self or _parent (default is _blank).
 Actually is possible to add a custom html tooltip in a secure way.
 
 = Which WP version is the plugin compatible with ? =
